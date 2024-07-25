@@ -27,9 +27,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-slate-100 shadow-md mt-2">
           <Link to="/" className="block text-black hover:text-gray-300 px-2 py-1">Home</Link>
-          <Link to="/about" className="block text-black hover:text-gray-300 px-2 py-1">About</Link>
-          <Link to="/services" className="block text-black hover:text-gray-300 px-2 py-1">Services</Link>
-          <Link to="/contact" className="block text-black hover:text-gray-300 px-2 py-1">Contact</Link>
+          <Link to="/login" className="text-black hover:text-gray-300">Login</Link>
         </div>
       )}
     </nav>
