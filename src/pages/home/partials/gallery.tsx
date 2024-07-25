@@ -1,5 +1,4 @@
 
-
 const photos = [
   { id: 1, src: 'images/1.jpg', alt: 'Placeholder Image 1', type: 'image' },
   { id: 2, src: 'images/2.jpg', alt: 'Placeholder Image 2', type: 'image' },
