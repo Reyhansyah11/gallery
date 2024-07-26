@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="bg-slate-100 p-4 fixed top-0 left-0 w-full z-10 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-black text-xl font-bold">BrandName</div>
+        <div className="text-black text-xl font-bold">Gallery</div>
         <div className="hidden md:flex space-x-4">
           <Link to="/" className="text-black hover:text-gray-300">Home</Link>
           <Link to="/login" className="text-black hover:text-gray-300">Login</Link>
