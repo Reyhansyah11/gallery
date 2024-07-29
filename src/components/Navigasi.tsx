@@ -15,6 +15,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-4">
           <Link to="/" className="text-black hover:text-gray-600">Home</Link>
           <Link to="/login" className="text-black hover:text-gray-600">Login</Link>
+          <Link to="/dashboard" className="block text-black hover:text-gray-600 px-2 py-1">dashboard</Link>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-gray-600 focus:outline-none">
@@ -28,6 +29,7 @@ const Navbar = () => {
         <div className="md:hidden bg-slate-100 shadow-md mt-2">
           <Link to="/" className="block text-black hover:text-gray-600 px-2 py-1">Home</Link>
           <Link to="/login" className="block text-black hover:text-gray-600 px-2 py-1">Login</Link>
+          <Link to="/dashboard" className="block text-black hover:text-gray-600 px-2 py-1">dashboard</Link>
         </div>
       )}
     </nav>
