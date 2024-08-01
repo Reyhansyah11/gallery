@@ -43,7 +43,7 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 py-20 mt-10">
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4">
         {photos.map(photo => (
           <div key={photo.id} className="mb-4 break-inside-avoid">

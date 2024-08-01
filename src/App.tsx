@@ -1,26 +1,38 @@
 import Navbar from './components/Navigasi';
 import Footer from './components/Footer';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/home/index';
 import Login from './pages/Login/index';
 import Dashboard from './pages/dashboard/index';
 
-function App() {
-  return (
-    <>
-      <Router>
-        <Navbar />
-        <div className="pt-16"> {/* Padding atas untuk menghindari konten tertutup oleh navbar */}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-          </Routes>
-        </div>
-        <Footer />
-      </Router>
-    </>
-  );
-}
+const App: React.FC = () => {
+  const location = useLocation();
+  const pathNames = location.pathname.split('/').filter(path => path);
 
-export default App;
+  const isDashboard = pathNames[0] === "dashboard";
+
+  const showNavbar = !isDashboard;
+
+  return (
+    <div>
+      {showNavbar && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        {/* Tambahkan rute lainnya di sini */}
+      </Routes>
+      <Footer />
+    </div>
+  );
+};
+
+const AppWrapper: React.FC = () => {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+};
+
+export default AppWrapper;

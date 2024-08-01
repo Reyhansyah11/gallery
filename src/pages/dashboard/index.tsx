@@ -1,9 +1,16 @@
-const Dashboard = () => {
-    return (
-        <div className="flex items-center justify-center min-h-screen">
-        <h1 className="text-black">hello dunia</h1>
-        </div>
-    )
-}
+import React from 'react';
+import Sidebar from './partials/Sidebar';
+
+const Dashboard: React.FC = () => {
+  return (
+    <div className="flex h-full">
+      <Sidebar />
+      <div className="flex-1 p-6 overflow-auto">
+        <h1 className="text-2xl font-bold">Dashboard</h1>
+        {/* Konten utama dashboard */}
+      </div>
+    </div>
+  );
+};
 
 export default Dashboard;
